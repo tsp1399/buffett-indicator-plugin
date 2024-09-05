@@ -39,4 +39,20 @@ class Buffett_API {
 
         return $gdp;  // Convert GDP from billions to actual value
     }
+
+    public function test_apis() {
+        try {
+            $wilshire5000 = $this->fetch_wilshire5000_index();
+            $gdp = $this->fetch_gdp();
+
+            error_log("Wilshire 5000 Index: " . $wilshire5000);
+            error_log("US GDP: " . $gdp);
+
+            echo "Wilshire 5000 Index: " . $wilshire5000 . "\n";
+            echo "US GDP: " . $gdp . "\n";
+        } catch (Exception $e) {
+            error_log("Error testing APIs: " . $e->getMessage());
+            echo "Error testing APIs: " . $e->getMessage() . "\n";
+        }
+    }
 }
