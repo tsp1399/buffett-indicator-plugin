@@ -3,7 +3,7 @@
 class Buffett_API {
 
     public function fetch_wilshire5000_index() {
-        $response = wp_remote_get('https://query1.finance.yahoo.com/v8/finance/chart/%5EW5000');
+        $response = wp_remote_get('https://query1.finance.yahoo.com/v8/finance/chart/%5EFTW5000'); // Updated ticker
         if (is_wp_error($response)) {
             throw new Exception('Failed to retrieve data from Yahoo Finance.');
         }

@@ -15,7 +15,6 @@ if (!defined('ABSPATH')) {
 require_once plugin_dir_path(__FILE__) . 'includes/class-buffett-indicator.php';
 require_once plugin_dir_path(__FILE__) . 'includes/class-buffett-api.php';
 
-
 // Initialize the plugin
 function buffett_indicator_init() {
     $plugin = new Buffett_Indicator();
